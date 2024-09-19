@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las flores amarillas</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black; /* Fondo negro */
+            background-image: url('img/amar.png'); /* Imagen de fondo */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; /* Para cubrir todo el fondo */
+            position: relative; /* Para el pseudo-elemento */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Capa oscura sobre la imagen */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad */
+            z-index: 1; /* Asegúrate de que esté detrás del texto */
+        }
+
+        /* Contenedor principal */
+        .container {
+            position: relative; /* Para que esté por encima del overlay */
+            z-index: 2; /* Asegúrate de que esté por encima del overlay */
+            display: flex;
+            flex-direction: column; /* Coloca los elementos en columna */
+            align-items: center; /* Centra los elementos horizontalmente */
+        }
+
+        h1, h2 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 8vw;
+            animation: fadeInOut 3s infinite; /* Animación suave */
+        }
+
+        h2 {
+            font-size: 4vw;
+            margin-top: 20px;
+            animation: pulse 2s infinite; /* Pequeño efecto de pulsación */
+        }
+
+        h3, h4 {
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            animation: moveLeftRight 4s infinite alternate;
+        }
+
+        @keyframes moveLeftRight {
+            0% {
+                transform: translateX(-10px);
+            }
+            100% {
+                transform: translateX(10px);
+            }
+        }
+
+        button {
+            font-size: 3vw;
+            padding: 15px 30px;
+            margin-top: 30px;
+            border: none;
+            background-color: #ff3366;
+            color: white;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div> <!-- Capa oscura -->
+    <div class="container"> <!-- Contenedor centrado -->
+        <h1>HOLA KARINA(●'◡'●)</h1>
+        <h2>Tengo un regalo para ti✍(◔◡◔)</h2>
+        <h3>Sale gratis hacer esto y también vi que se entrega a amigos o algo así</h3>
+        <h4>("Cosas raras de la chavalada por cierto me robe la mitad del codigo como todo buen programador")</h4>
+        <button onclick="window.location.href='rosas.html'">Ver regalo☞💛</button>
+    </div>
+</body>
+</html>
